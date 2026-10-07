@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fdfcff;
+  --color-pale: #f2ecfa;
+  --color-lavender: #d8c7ec;
+  --color-lilac: #b99ad8;
+  --color-violet: #8b63b5;
+  --color-deep: #5b367e;
+  --color-ink: #281a35;
+
+  --font-serif: var(--ff-serif), "Georgia", serif;
+  --font-sans: var(--ff-sans), "Helvetica Neue", Arial, sans-serif;
+  --font-jp: var(--ff-jp), "Hiragino Mincho ProN", serif;
+}
+
+html {
+  background: var(--color-paper);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+::selection {
+  background: var(--color-lavender);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--color-violet);
+  outline-offset: 4px;
+}
+
+/* fixed UI tone: ink on bright chapters, lavender on dark ones */
+.ui-tone .tone-text,
+.ui-tone .tone-line {
+  color: var(--color-ink);
+}
+.ui-tone[data-tone="dark"] .tone-text,
+.ui-tone[data-tone="dark"] .tone-line {
+  color: var(--color-lavender);
+}
+
+/* vertical japanese text */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+/* outline display type */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-violet);
+}
+@media (min-width: 768px) {
+  .text-outline {
+    -webkit-text-stroke-width: 1.5px;
+  }
+}
+
+/* scroll hint line */
+@keyframes scroll-drop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+.scroll-drop {
+  animation: scroll-drop 2.2s cubic-bezier(0.77, 0, 0.18, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-drop {
+    animation: none;
+    transform: scaleY(1);
+  }
+}
+
+/* elegant underline reveal for interactive type */
+.link-line {
+  position: relative;
+}
+.link-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.link-line:hover::after,
+.link-line:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
