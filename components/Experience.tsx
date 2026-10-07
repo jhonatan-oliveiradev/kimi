@@ -354,27 +354,27 @@ export default function Experience() {
             <div
               ref={heroRef}
               className="invisible absolute inset-0"
-              style={{ textShadow: "0 0 26px rgba(253,252,255,0.9), 0 0 6px rgba(253,252,255,0.8)" }}
+              style={{ textShadow: "0 1px 0 rgba(253,252,255,0.88), 0 0 12px rgba(253,252,255,0.48)" }}
             >
-              <p className="hero-meta absolute left-5 top-[11vh] font-sans text-[10px] uppercase tracking-[0.45em] text-deep md:left-10 md:text-xs">
+              <p className="hero-meta absolute left-5 top-[11vh] font-sans text-[10px] font-medium uppercase tracking-[0.45em] text-[#4B2C68] md:left-10 md:text-xs">
                 Botanical fragrance — Nº 01
               </p>
-              <p className="hero-meta absolute right-5 top-[11vh] hidden font-sans text-[10px] uppercase tracking-[0.45em] text-violet md:right-10 md:block md:text-xs">
+              <p className="hero-meta absolute right-5 top-[11vh] hidden font-sans text-[10px] font-medium uppercase tracking-[0.45em] text-[#704694] md:right-10 md:block md:text-xs">
                 Eau de Parfum · 50 ml
               </p>
               <p
                 aria-hidden="true"
-                className="hero-meta writing-vertical absolute right-5 top-1/2 -translate-y-1/2 font-jp text-sm tracking-[0.6em] text-violet/80 md:right-10 md:text-base"
+                className="hero-meta writing-vertical absolute right-5 top-1/2 -translate-y-1/2 font-jp text-sm tracking-[0.6em] text-[#704694]/90 md:right-10 md:text-base"
               >
                 香りと記憶
               </p>
 
-              <h1 className="hero-display absolute bottom-[14vh] left-5 font-serif leading-[0.94] tracking-tight text-ink md:left-10">
+              <h1 className="hero-display copy-veil copy-veil-hero absolute bottom-[14vh] left-5 font-serif leading-[0.94] tracking-tight text-[#1B1023] md:left-10">
                 <span className="type-reveal block">
                   <span className="hero-line-inner block">BETWEEN</span>
                 </span>
                 <span className="type-reveal block">
-                  <span className="hero-line-inner block italic font-light text-violet">
+                  <span className="hero-line-inner block italic font-light text-[#704694]">
                     NATURE
                   </span>
                 </span>
@@ -397,11 +397,12 @@ export default function Experience() {
                 <div
                   style={
                     ch.dark
-                      ? { textShadow: "0 0 28px rgba(40,26,53,0.65), 0 0 6px rgba(40,26,53,0.5)" }
-                      : { textShadow: "0 0 30px rgba(253,252,255,0.95), 0 0 8px rgba(253,252,255,0.85)" }
+                      ? { textShadow: "0 1px 1px rgba(24,12,32,0.5), 0 0 12px rgba(24,12,32,0.34)" }
+                      : { textShadow: "0 1px 0 rgba(253,252,255,0.9), 0 0 12px rgba(253,252,255,0.5)" }
                   }
                   className={[
-                    "absolute flex flex-col gap-5 md:gap-7",
+                    "copy-veil absolute flex flex-col gap-5 md:gap-7",
+                    ch.dark ? "copy-veil-dark" : "",
                     ch.align === "right"
                       ? "right-5 top-1/2 -translate-y-1/2 items-end text-right md:right-[7vw]"
                       : ch.align === "center"
@@ -412,8 +413,8 @@ export default function Experience() {
                   ].join(" ")}
                 >
                   <p
-                    className={`ch-label font-sans text-[10px] uppercase tracking-[0.45em] md:text-xs ${
-                      ch.dark ? "text-lavender" : "text-deep"
+                    className={`ch-label font-sans text-[10px] font-medium uppercase tracking-[0.45em] md:text-xs ${
+                      ch.dark ? "text-[#F4EAFB]" : "text-[#4B2C68]"
                     }`}
                   >
                     {String(ch.index).padStart(2, "0")} · {ch.label}
@@ -421,14 +422,14 @@ export default function Experience() {
                   </p>
                   <h2
                     className={`font-serif leading-[1.06] tracking-tight ${
-                      ch.dark ? "text-pale" : "text-ink"
+                      ch.dark ? "text-[#FFF9FF]" : "text-[#1B1023]"
                     }`}
                   >
                     {ch.lines.map((l, i) => (
                       <span key={i} className="type-reveal block">
                         <span
                           className={`ch-line-inner block text-[9.5vw] md:text-[5.6vw] ${
-                            i % 2 === 1 ? "italic font-light " + (ch.dark ? "text-lilac" : "text-violet") : ""
+                            i % 2 === 1 ? "italic font-light " + (ch.dark ? "text-[#E7D9F2]" : "text-[#704694]") : ""
                           }`}
                         >
                           {l}
@@ -437,8 +438,8 @@ export default function Experience() {
                     ))}
                   </h2>
                   <p
-                    className={`ch-note max-w-[40ch] font-sans text-[10px] uppercase leading-relaxed tracking-[0.3em] md:text-[11px] ${
-                      ch.dark ? "text-lilac" : "text-violet"
+                    className={`ch-note max-w-[40ch] font-sans text-[10px] font-medium uppercase leading-relaxed tracking-[0.3em] md:text-[11px] ${
+                      ch.dark ? "text-[#E7D9F2]" : "text-[#704694]"
                     }`}
                   >
                     {ch.note}

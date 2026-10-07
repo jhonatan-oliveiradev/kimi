@@ -57,11 +57,11 @@ body {
 /* fixed UI tone: ink on bright chapters, lavender on dark ones */
 .ui-tone .tone-text,
 .ui-tone .tone-line {
-  color: var(--color-ink);
+  color: #1b1023;
 }
 .ui-tone[data-tone="dark"] .tone-text,
 .ui-tone[data-tone="dark"] .tone-line {
-  color: var(--color-lavender);
+  color: #fff9ff;
 }
 
 /* vertical japanese text */
@@ -151,5 +151,60 @@ body {
 @media (min-width: 768px) {
   .hero-display {
     font-size: clamp(6.5rem, min(11vw, 22vh), 17.5rem);
+  }
+}
+
+
+/* Contextual contrast support: a soft editorial veil improves readability over
+   detailed film frames without introducing visible cards or hard-edged panels. */
+.copy-veil {
+  isolation: isolate;
+}
+
+.copy-veil::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: -2.75rem -3.5rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(253, 252, 255, 0.78) 0%,
+    rgba(253, 252, 255, 0.48) 42%,
+    rgba(253, 252, 255, 0.16) 62%,
+    rgba(253, 252, 255, 0) 78%
+  );
+  filter: blur(8px);
+}
+
+.copy-veil-dark::before {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(27, 16, 35, 0.72) 0%,
+    rgba(27, 16, 35, 0.46) 42%,
+    rgba(27, 16, 35, 0.14) 64%,
+    rgba(27, 16, 35, 0) 80%
+  );
+}
+
+.copy-veil-hero::before {
+  inset: -3rem -4.5rem;
+  background: radial-gradient(
+    ellipse at 38% 52%,
+    rgba(253, 252, 255, 0.68) 0%,
+    rgba(253, 252, 255, 0.36) 44%,
+    rgba(253, 252, 255, 0.1) 64%,
+    rgba(253, 252, 255, 0) 80%
+  );
+  filter: blur(10px);
+}
+
+@media (max-width: 767px) {
+  .copy-veil::before {
+    inset: -2rem -1.5rem;
+  }
+
+  .copy-veil-hero::before {
+    inset: -2.5rem -1.5rem;
   }
 }
