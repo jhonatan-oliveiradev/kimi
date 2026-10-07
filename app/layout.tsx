@@ -38,6 +38,7 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
+  manifest: "/manifest.webmanifest",
   keywords: SITE_KEYWORDS,
   creator: SITE_NAME,
   publisher: SITE_NAME,
