@@ -1,0 +1,17 @@
+{
+  "name": "ORIMAE Nº 01",
+  "short_name": "ORIMAE",
+  "description": "ORIMAE Nº 01 is a botanical Eau de Parfum shaped by violet, iris, mineral air and soft woods.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCFF",
+  "theme_color": "#FDFCFF",
+  "categories": ["beauty", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
