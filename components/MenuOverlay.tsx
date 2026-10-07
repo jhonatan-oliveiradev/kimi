@@ -96,23 +96,23 @@ export default function MenuOverlay({ open, onClose, onNavigate }: Props) {
         <path className="menu-branch" d="M300 620 C350 590 410 590 460 620 M300 620 C280 550 230 510 160 500" stroke="#D8C7EC" strokeWidth="1.1" fill="none" />
       </svg>
 
-      <div className="relative flex h-full flex-col justify-between px-6 pb-8 pt-24 md:px-14 md:pt-28">
-        <nav aria-label="Fragrance chapters">
-          <ul className="flex flex-col gap-1 md:gap-2">
+      <div className="relative flex h-full min-h-0 flex-col justify-between px-6 pb-6 pt-16 md:px-14 md:pb-8 md:pt-[7vh]">
+        <nav aria-label="Fragrance chapters" className="min-h-0 flex-1">
+          <ul className="flex h-full flex-col justify-center gap-0">
             {CHAPTERS.map((c) => (
               <li key={c.id} className="type-reveal overflow-hidden">
                 <button
                   data-hover
                   onClick={() => onNavigate(c.from + 0.001)}
-                  className="menu-link group flex items-baseline gap-4 text-left md:gap-8"
+                  className="menu-link group flex w-full items-baseline gap-4 text-left md:gap-7"
                 >
-                  <span className="font-sans text-[10px] tracking-[0.4em] text-[#8B63B5] md:text-xs">
+                  <span className="w-7 shrink-0 font-sans text-[9px] font-medium tracking-[0.32em] text-[#5B367E] md:w-9 md:text-[10px]">
                     {String(c.index).padStart(2, "0")}
                   </span>
-                  <span className="font-serif text-[11vw] leading-[1.02] text-[#281A35] transition-all duration-500 group-hover:translate-x-3 group-hover:text-[#5B367E] group-hover:italic md:text-[7.5vw]">
+                  <span className="font-serif text-[clamp(2.7rem,7.2vh,5.75rem)] font-semibold leading-[0.92] tracking-[-0.035em] text-[#1F1229] transition-all duration-500 group-hover:translate-x-2 group-hover:text-[#5B367E] group-hover:italic">
                     {c.label}
                   </span>
-                  <span className="hidden font-jp text-lg text-[#B99AD8] transition-opacity duration-500 group-hover:opacity-100 md:block md:opacity-40">
+                  <span className="hidden font-jp text-sm text-[#8B63B5] transition-opacity duration-500 group-hover:opacity-100 md:block md:opacity-60">
                     {c.jp}
                   </span>
                 </button>
@@ -122,14 +122,14 @@ export default function MenuOverlay({ open, onClose, onNavigate }: Props) {
         </nav>
 
         <div className="flex items-end justify-between">
-          <div className="menu-meta font-sans text-[10px] uppercase leading-relaxed tracking-[0.35em] text-[#5B367E]">
+          <div className="menu-meta font-sans text-[9px] font-medium uppercase leading-relaxed tracking-[0.3em] text-[#4B2C68] md:text-[10px]">
             <p>ORIMAE · Between nature and skin</p>
             <p className="text-[#8B63B5]">Eau de Parfum · Nº 01 · 50 ml</p>
           </div>
           <button
             data-hover
             onClick={onClose}
-            className="menu-meta group flex min-h-[44px] items-center gap-3 font-sans text-xs uppercase tracking-[0.4em] text-[#281A35]"
+            className="menu-meta group flex min-h-[44px] items-center gap-3 font-sans text-[10px] font-medium uppercase tracking-[0.35em] text-[#1F1229] md:text-xs"
           >
             Close
             <span className="block h-px w-10 bg-[#281A35] transition-all duration-500 group-hover:w-16 group-hover:bg-[#8B63B5]" />
