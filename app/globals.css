@@ -131,3 +131,11 @@ body {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+
+/* reveal masks need a little optical breathing room for serif ascenders/descenders.
+   Negative margins preserve the original composition and GSAP reveal geometry. */
+.type-reveal {
+  padding-block: 0.12em;
+  margin-block: -0.12em;
+}
