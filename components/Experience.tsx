@@ -356,10 +356,10 @@ export default function Experience() {
               className="invisible absolute inset-0"
               style={{ textShadow: "0 0 26px rgba(253,252,255,0.9), 0 0 6px rgba(253,252,255,0.8)" }}
             >
-              <p className="hero-meta absolute left-5 top-[16vh] font-sans text-[10px] uppercase tracking-[0.45em] text-deep md:left-10 md:text-xs">
+              <p className="hero-meta absolute left-5 top-[11vh] font-sans text-[10px] uppercase tracking-[0.45em] text-deep md:left-10 md:text-xs">
                 Botanical fragrance — Nº 01
               </p>
-              <p className="hero-meta absolute right-5 top-[16vh] hidden font-sans text-[10px] uppercase tracking-[0.45em] text-violet md:right-10 md:block md:text-xs">
+              <p className="hero-meta absolute right-5 top-[11vh] hidden font-sans text-[10px] uppercase tracking-[0.45em] text-violet md:right-10 md:block md:text-xs">
                 Eau de Parfum · 50 ml
               </p>
               <p
@@ -369,17 +369,17 @@ export default function Experience() {
                 香りと記憶
               </p>
 
-              <h1 className="absolute bottom-[14vh] left-5 font-serif leading-[0.92] tracking-tight text-ink md:left-10">
+              <h1 className="hero-display absolute bottom-[14vh] left-5 font-serif leading-[0.94] tracking-tight text-ink md:left-10">
                 <span className="type-reveal block">
-                  <span className="hero-line-inner block text-[13.5vw] md:text-[11vw]">BETWEEN</span>
+                  <span className="hero-line-inner block">BETWEEN</span>
                 </span>
                 <span className="type-reveal block">
-                  <span className="hero-line-inner block text-[13.5vw] italic font-light text-violet md:text-[11vw]">
+                  <span className="hero-line-inner block italic font-light text-violet">
                     NATURE
                   </span>
                 </span>
                 <span className="type-reveal block">
-                  <span className="hero-line-inner block text-[13.5vw] md:text-[11vw]">
+                  <span className="hero-line-inner block">
                     AND&nbsp;SKIN
                   </span>
                 </span>
@@ -420,7 +420,7 @@ export default function Experience() {
                     <span className="font-jp tracking-normal">&nbsp;{ch.jp}</span>
                   </p>
                   <h2
-                    className={`font-serif leading-[0.95] tracking-tight ${
+                    className={`font-serif leading-[1.06] tracking-tight ${
                       ch.dark ? "text-pale" : "text-ink"
                     }`}
                   >
@@ -450,52 +450,79 @@ export default function Experience() {
         </div>
       </div>
 
-      {/* colophon */}
+      {/* brand footer */}
       <footer
         ref={footerRef}
-        className="relative z-10 border-t border-lavender/60 bg-paper px-5 pb-10 pt-16 md:px-10 md:pt-24"
+        className="relative z-10 border-t border-lavender/60 bg-paper px-5 pb-8 pt-20 md:px-10 md:pb-10 md:pt-28"
       >
-        <div className="flex flex-col gap-14 md:gap-20">
-          <h2 className="font-serif leading-none tracking-tight text-ink">
-            <span className="block text-[18vw] md:text-[12vw]">
-              Nº01<span className="text-violet">.</span>
-            </span>
-            <span className="mt-2 block font-jp text-[6vw] tracking-[0.4em] text-violet md:text-[3vw]">香</span>
-          </h2>
+        <div className="mx-auto flex max-w-[1800px] flex-col">
+          <div className="grid gap-12 border-b border-lavender/60 pb-16 md:grid-cols-12 md:gap-8 md:pb-24">
+            <div className="md:col-span-9">
+              <p className="font-sans text-[9px] font-medium uppercase tracking-[0.42em] text-violet md:text-[10px]">
+                Nº 01 · Eau de Parfum · 50 ml
+              </p>
+              <h2 className="mt-5 font-serif text-[20vw] leading-[0.76] tracking-[-0.055em] text-ink md:mt-8 md:text-[12.5vw]">
+                ORIMAE<span className="text-violet">.</span>
+              </h2>
+            </div>
 
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-8 border-t border-lavender/60 pt-8 sm:grid-cols-2 md:grid-cols-4">
-            {[
-              ["Composition", "Violet · iris · soft woods"],
-              ["Character", "Floral · mineral · woody"],
-              ["Concentration", "Eau de Parfum · 50 ml"],
-              ["Edition", "Nº 01 · MMXXVI"],
-            ].map(([dt, dd]) => (
-              <div key={dt} className="flex flex-col gap-2">
-                <dt className="font-sans text-[10px] uppercase tracking-[0.4em] text-violet">{dt}</dt>
-                <dd className="font-serif text-lg leading-snug text-ink">{dd}</dd>
-              </div>
-            ))}
-          </dl>
-
-          <div className="flex flex-col gap-3 border-t border-lavender/60 pt-6 font-sans text-[10px] uppercase tracking-[0.35em] text-deep md:flex-row md:items-center md:justify-between">
-            <p>
-              ORIMAE · Between nature and skin
-            </p>
-            <p>Botanical fragrance house · MMXXVI</p>
+            <div className="flex flex-col justify-end gap-6 md:col-span-3 md:pb-2">
+              <span className="font-jp text-3xl text-violet md:text-4xl">香</span>
+              <p className="max-w-[18ch] font-serif text-2xl leading-[1.02] tracking-tight text-ink md:text-3xl">
+                A quiet composition made to live close to the skin.
+              </p>
+              <p className="font-sans text-[9px] uppercase leading-relaxed tracking-[0.32em] text-deep md:text-[10px]">
+                Between nature and skin · MMXXVI
+              </p>
+            </div>
           </div>
 
-          <p className="border-t border-lavender/60 pt-5 font-sans text-[9px] uppercase tracking-[0.3em] text-violet/80">
-            Developed by{" "}
-            <Link
-              href="https://jhonatanoliveira.com"
-              target="_blank"
-              rel="noreferrer"
-              data-hover
-              className="link-line text-deep"
-            >
-              Jhonatan Oliveira
-            </Link>
-          </p>
+          <div className="border-b border-lavender/60 py-7 md:py-9">
+            <p className="mb-6 font-sans text-[9px] font-medium uppercase tracking-[0.42em] text-violet md:text-[10px]">
+              Olfactive architecture
+            </p>
+
+            <dl className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+              {[
+                ["Opening", "Mineral accord · morning air"],
+                ["Heart", "Violet · iris · soft florals"],
+                ["Base", "Soft woods · resin"],
+                ["Edition", "Nº 01 · MMXXVI"],
+              ].map(([dt, dd], index) => (
+                <div
+                  key={dt}
+                  className={[
+                    "flex min-h-24 flex-col justify-between gap-5 border-t border-lavender/50 py-5 sm:min-h-28",
+                    "sm:px-6 md:min-h-32 md:border-l md:border-t-0 md:px-7 md:py-1",
+                    index === 0 ? "sm:pl-0 md:border-l-0 md:pl-0" : "",
+                  ].join(" ")}
+                >
+                  <dt className="font-sans text-[9px] uppercase tracking-[0.36em] text-violet">
+                    {String(index + 1).padStart(2, "0")} · {dt}
+                  </dt>
+                  <dd className="max-w-[18ch] font-serif text-xl leading-[1.05] tracking-tight text-ink md:text-2xl">
+                    {dd}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+
+          <div className="flex flex-col gap-5 pt-6 font-sans text-[9px] uppercase tracking-[0.3em] text-deep md:flex-row md:items-end md:justify-between md:pt-7">
+            <p>ORIMAE · Botanical fragrance house</p>
+            <p className="text-violet/80">
+              Developed by{" "}
+              <Link
+                href="https://jhonatanoliveira.com"
+                target="_blank"
+                rel="noreferrer"
+                data-hover
+                className="link-line text-deep"
+              >
+                Jhonatan Oliveira
+              </Link>
+            </p>
+          </div>
         </div>
       </footer>
 

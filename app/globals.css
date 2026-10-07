@@ -133,10 +133,23 @@ body {
 }
 
 
-/* reveal masks need a little optical breathing room for serif ascenders/descenders.
-   Negative margins preserve the original composition and GSAP reveal geometry. */
+/* Reveal wrappers stay true masks. Optical room belongs to the animated line itself,
+   so serif descenders remain intact without weakening the GSAP reveal. */
 .type-reveal {
   overflow: hidden;
-  padding-block: 0.12em;
-  margin-block: -0.12em;
+}
+
+.hero-line-inner,
+.ch-line-inner {
+  padding-bottom: 0.12em;
+}
+
+.hero-display {
+  font-size: 13.5vw;
+}
+
+@media (min-width: 768px) {
+  .hero-display {
+    font-size: clamp(6.5rem, min(11vw, 22vh), 17.5rem);
+  }
 }
