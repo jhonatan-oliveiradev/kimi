@@ -1,3 +1,4 @@
+// Central source of truth for ORIMAE's public product identity and canonical URL.
 export const SITE_URL = "https://kimi-dun-theta.vercel.app";
 
 export const SITE_NAME = "ORIMAE";
