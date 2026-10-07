@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
@@ -288,7 +289,7 @@ export default function Experience() {
             }}
             className="tone-text link-line font-sans text-xs uppercase tracking-[0.45em] transition-colors duration-700"
           >
-            MA&nbsp;—&nbsp;<span className="font-jp tracking-normal">間</span>
+            ORIMAE
           </a>
           <button
             data-hover
@@ -306,7 +307,7 @@ export default function Experience() {
               ref={indLabelRef}
               className="tone-text font-sans text-[10px] uppercase tracking-[0.4em] transition-colors duration-700 md:text-xs"
             >
-              Introduction — 序
+              Essence — 香
             </span>
           </div>
 
@@ -356,36 +357,36 @@ export default function Experience() {
               style={{ textShadow: "0 0 26px rgba(253,252,255,0.9), 0 0 6px rgba(253,252,255,0.8)" }}
             >
               <p className="hero-meta absolute left-5 top-[16vh] font-sans text-[10px] uppercase tracking-[0.45em] text-deep md:left-10 md:text-xs">
-                Visual study — MMXXVI
+                Botanical fragrance — Nº 01
               </p>
               <p className="hero-meta absolute right-5 top-[16vh] hidden font-sans text-[10px] uppercase tracking-[0.45em] text-violet md:right-10 md:block md:text-xs">
-                Scroll-driven film · 200 frames
+                Eau de Parfum · 50 ml
               </p>
               <p
                 aria-hidden="true"
                 className="hero-meta writing-vertical absolute right-5 top-1/2 -translate-y-1/2 font-jp text-sm tracking-[0.6em] text-violet/80 md:right-10 md:text-base"
               >
-                自然と形の間
+                香りと記憶
               </p>
 
               <h1 className="absolute bottom-[14vh] left-5 font-serif leading-[0.92] tracking-tight text-ink md:left-10">
-                <span className="block overflow-hidden">
+                <span className="type-reveal block">
                   <span className="hero-line-inner block text-[13.5vw] md:text-[11vw]">BETWEEN</span>
                 </span>
-                <span className="block overflow-hidden">
+                <span className="type-reveal block">
                   <span className="hero-line-inner block text-[13.5vw] italic font-light text-violet md:text-[11vw]">
                     NATURE
                   </span>
                 </span>
-                <span className="block overflow-hidden">
+                <span className="type-reveal block">
                   <span className="hero-line-inner block text-[13.5vw] md:text-[11vw]">
-                    AND&nbsp;FORM
+                    AND&nbsp;SKIN
                   </span>
                 </span>
               </h1>
 
               <div className="hero-hint absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3">
-                <span className="font-sans text-[9px] uppercase tracking-[0.5em] text-deep">Scroll</span>
+                <span className="font-sans text-[9px] uppercase tracking-[0.5em] text-deep">Discover</span>
                 <span className="scroll-drop block h-12 w-px bg-deep" />
               </div>
             </div>
@@ -424,7 +425,7 @@ export default function Experience() {
                     }`}
                   >
                     {ch.lines.map((l, i) => (
-                      <span key={i} className="block overflow-hidden">
+                      <span key={i} className="type-reveal block">
                         <span
                           className={`ch-line-inner block text-[9.5vw] md:text-[5.6vw] ${
                             i % 2 === 1 ? "italic font-light " + (ch.dark ? "text-lilac" : "text-violet") : ""
@@ -457,17 +458,17 @@ export default function Experience() {
         <div className="flex flex-col gap-14 md:gap-20">
           <h2 className="font-serif leading-none tracking-tight text-ink">
             <span className="block text-[18vw] md:text-[12vw]">
-              FIN<span className="text-violet">.</span>
+              Nº01<span className="text-violet">.</span>
             </span>
-            <span className="mt-2 block font-jp text-[6vw] tracking-[0.4em] text-violet md:text-[3vw]">終</span>
+            <span className="mt-2 block font-jp text-[6vw] tracking-[0.4em] text-violet md:text-[3vw]">香</span>
           </h2>
 
           <dl className="grid grid-cols-1 gap-x-8 gap-y-8 border-t border-lavender/60 pt-8 sm:grid-cols-2 md:grid-cols-4">
             {[
-              ["Film", "200 illustrated frames, scrubbed by hand"],
-              ["Colour", "Blue remapped to lilac in real time — GLSL"],
-              ["Type", "Cormorant Garamond · Space Grotesk · Noto Serif JP"],
-              ["Motion", "Lenis · GSAP ScrollTrigger · WebGL"],
+              ["Composition", "Violet · iris · soft woods"],
+              ["Character", "Floral · mineral · woody"],
+              ["Concentration", "Eau de Parfum · 50 ml"],
+              ["Edition", "Nº 01 · MMXXVI"],
             ].map(([dt, dd]) => (
               <div key={dt} className="flex flex-col gap-2">
                 <dt className="font-sans text-[10px] uppercase tracking-[0.4em] text-violet">{dt}</dt>
@@ -478,10 +479,23 @@ export default function Experience() {
 
           <div className="flex flex-col gap-3 border-t border-lavender/60 pt-6 font-sans text-[10px] uppercase tracking-[0.35em] text-deep md:flex-row md:items-center md:justify-between">
             <p>
-              MA&nbsp;—&nbsp;<span className="font-jp tracking-normal">間</span>&nbsp;· Between nature and form
+              ORIMAE · Between nature and skin
             </p>
-            <p>An interactive anime editorial · MMXXVI</p>
+            <p>Botanical fragrance house · MMXXVI</p>
           </div>
+
+          <p className="border-t border-lavender/60 pt-5 font-sans text-[9px] uppercase tracking-[0.3em] text-violet/80">
+            Developed by{" "}
+            <Link
+              href="https://jhonatanoliveira.com"
+              target="_blank"
+              rel="noreferrer"
+              data-hover
+              className="link-line text-deep"
+            >
+              Jhonatan Oliveira
+            </Link>
+          </p>
         </div>
       </footer>
 

@@ -81,7 +81,7 @@ export default function MenuOverlay({ open, onClose, onNavigate }: Props) {
       className="invisible fixed inset-0 z-[60] bg-[#F2ECFA]"
       role="dialog"
       aria-modal="true"
-      aria-label="Chapters menu"
+      aria-label="Fragrance chapters menu"
     >
       {/* botanical line composition */}
       <svg
@@ -97,10 +97,10 @@ export default function MenuOverlay({ open, onClose, onNavigate }: Props) {
       </svg>
 
       <div className="relative flex h-full flex-col justify-between px-6 pb-8 pt-24 md:px-14 md:pt-28">
-        <nav aria-label="Chapters">
+        <nav aria-label="Fragrance chapters">
           <ul className="flex flex-col gap-1 md:gap-2">
             {CHAPTERS.map((c) => (
-              <li key={c.id} className="overflow-hidden">
+              <li key={c.id} className="type-reveal overflow-hidden">
                 <button
                   data-hover
                   onClick={() => onNavigate(c.from + 0.001)}
@@ -109,7 +109,7 @@ export default function MenuOverlay({ open, onClose, onNavigate }: Props) {
                   <span className="font-sans text-[10px] tracking-[0.4em] text-[#8B63B5] md:text-xs">
                     {String(c.index).padStart(2, "0")}
                   </span>
-                  <span className="font-serif text-[11vw] leading-[0.95] text-[#281A35] transition-all duration-500 group-hover:translate-x-3 group-hover:text-[#5B367E] group-hover:italic md:text-[7.5vw]">
+                  <span className="font-serif text-[11vw] leading-[1.02] text-[#281A35] transition-all duration-500 group-hover:translate-x-3 group-hover:text-[#5B367E] group-hover:italic md:text-[7.5vw]">
                     {c.label}
                   </span>
                   <span className="hidden font-jp text-lg text-[#B99AD8] transition-opacity duration-500 group-hover:opacity-100 md:block md:opacity-40">
@@ -123,8 +123,8 @@ export default function MenuOverlay({ open, onClose, onNavigate }: Props) {
 
         <div className="flex items-end justify-between">
           <div className="menu-meta font-sans text-[10px] uppercase leading-relaxed tracking-[0.35em] text-[#5B367E]">
-            <p>Between nature and form</p>
-            <p className="text-[#8B63B5]">A scroll-driven film — 200 frames</p>
+            <p>ORIMAE · Between nature and skin</p>
+            <p className="text-[#8B63B5]">Eau de Parfum · Nº 01 · 50 ml</p>
           </div>
           <button
             data-hover

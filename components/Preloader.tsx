@@ -87,7 +87,7 @@ export default function Preloader({ ratio, done, onExited }: Props) {
         </div>
 
         <p className="text-[10px] uppercase tracking-[0.5em] text-[#8B63B5]">
-          Visual study — MMXXVI
+          ORIMAE · Nº 01 — MMXXVI
         </p>
       </div>
     </div>

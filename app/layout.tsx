@@ -22,9 +22,9 @@ const jp = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
-  title: "MA 間 — Between Nature and Form",
+  title: "ORIMAE — Between Nature and Skin",
   description:
-    "An experimental anime editorial. A 200-frame illustrated film scrubbed frame by frame through scroll, remapped in real time into a lilac monochrome.",
+    "ORIMAE Nº 01 is a botanical fragrance concept exploring the space between nature, memory and skin.",
 };
 
 export const viewport: Viewport = {
