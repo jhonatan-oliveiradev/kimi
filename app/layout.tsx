@@ -59,8 +59,11 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/media/poster.jpg",
+        url: "/og/orimae-no-01.jpg",
+        width: 1200,
+        height: 630,
         alt: "ORIMAE Nº 01 — Between Nature and Skin",
+        type: "image/jpeg",
       },
     ],
   },
@@ -68,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SOCIAL_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/media/poster.jpg"],
+    images: ["/og/orimae-no-01.jpg"],
   },
   robots: {
     index: true,

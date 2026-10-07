@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/generate-og-asset.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/generate-og-asset.mjs",
     "build": "next build && rm -rf dist && mv out dist",
     "start": "next start"
   },

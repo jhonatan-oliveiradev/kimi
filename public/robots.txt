@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kimi-dun-theta.vercel.app/sitemap.xml
+Sitemap: https://orimae-parfums.vercel.app/sitemap.xml
